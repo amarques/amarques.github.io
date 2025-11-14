@@ -32,7 +32,7 @@ body {
 }
 
 .profile-photo:hover {
-  content: url('../img/profile_photo_B.png');
+  content: url('../img/profile_photo_B.webp');
 }
 /* Content */
 .content {
