@@ -17,6 +17,10 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" as="style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
 
+    <!-- Precargar imágenes críticas -->
+    <link rel="preload" href="statics/img/profile_photo_A_241x231.webp" as="image" media="(max-width: 480px)">
+    <link rel="preload" href="statics/img/profile_photo_A.webp" as="image" media="(min-width: 481px)">
+
     <link rel="shortcut icon" href="statics/img/favicon.ico">
 
     <!-- Open Graph -->
@@ -30,14 +34,24 @@
   <body>
     <main class="container">
 
-      <img
-        src="statics/img/profile_photo_A.webp"
-        alt="Foto de Anderson Marques"
-        class="profile-photo"
-        width="404"
-        height="388"
-        fetchpriority="high"
-      >
+      <picture>
+        <source 
+          srcset="statics/img/profile_photo_A_241x231.webp"
+          media="(max-width: 480px)"
+          width="241"
+          height="231"
+        >
+        <img
+          src="statics/img/profile_photo_A.webp"
+          srcset="statics/img/profile_photo_A.webp 1x, statics/img/profile_photo_A_241x231.webp 2x"
+          alt="Foto de Anderson Marques"
+          class="profile-photo"
+          width="404"
+          height="388"
+          fetchpriority="high"
+          loading="eager"
+        >
+      </picture>
 
       <div class="content">
         <div class="main-info">

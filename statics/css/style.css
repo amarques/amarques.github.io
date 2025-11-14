@@ -25,15 +25,27 @@ body {
     gap: 30px;
 }
 
-/* Profile photo */
+/* Profile photo - Optimizado con CSS puro */
 .profile-photo {
   display: block;
   margin: 0 auto;
+  transition: opacity 0.3s ease;
 }
 
-.profile-photo:hover {
-  content: url('../img/profile_photo_B.webp');
+/* Hover para desktop con imagen grande */
+@media (min-width: 481px) {
+    .profile-photo:hover {
+        content: url('../img/profile_photo_B.webp');
+    }
 }
+
+/* Hover para móviles con imagen pequeña */
+@media (max-width: 480px) {
+    .profile-photo:hover {
+        content: url('../img/profile_photo_B_241x231.webp');
+    }
+}
+
 /* Content */
 .content {
     display: flex;
@@ -210,10 +222,6 @@ h1 {
 @media (max-width: 480px) {
     h1 {
         font-size: 26px;
-    }
-
-    .profile-photo {
-        max-width: 202px;
     }
 
     .main-info {
