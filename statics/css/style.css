@@ -1,0 +1,246 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    max-width: 738px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Profile photo */
+.profile-photo {
+    width: 100%;
+    max-width: 402px;
+    aspect-ratio: 1;
+    background: url('../img/profile_photo_A.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    transition: background-image 0.3s ease;
+}
+
+.profile-photo:hover {
+    background-image: url('../img/profile_photo_B.png');
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Main info */
+.main-info {
+    flex: 1;
+    min-width: 280px;
+    max-width: 340px;
+}
+
+h1 {
+    color: #7d7d7d;
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    letter-spacing: -1.3px;
+}
+
+/* Social media */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    list-style: none;
+}
+
+.social-links li {
+    width: 38px;
+    height: 38px;
+}
+
+.social-links a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    background: url('../img/social_sprites.svg') no-repeat;
+    background-size: 266px 76px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/social_sprites.svg') no-repeat;
+    background-size: 266px 76px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.15);
+}
+
+/* Sprites: Normal state (fila inferior) */
+#youtube {
+    background-position: 0px -38px;
+}
+
+#twitter {
+    background-position: -38px -38px;
+}
+
+#facebook {
+    background-position: -76px -38px;
+}
+
+#github {
+    background-position: -114px -38px;
+}
+
+#linkedin {
+    background-position: -152px -38px;
+}
+
+#adobe {
+    background-position: -190px -38px;
+}
+
+#logopond {
+    background-position: -228px -38px;
+}
+
+/* Sprites: Hover state (fila superior en ::before) */
+#youtube::before {
+    background-position: 0px 0px;
+}
+
+#twitter::before {
+    background-position: -38px 0px;
+}
+
+#facebook::before {
+    background-position: -76px 0px;
+}
+
+#github::before {
+    background-position: -114px 0px;
+}
+
+#linkedin::before {
+    background-position: -152px 0px;
+}
+
+#adobe::before {
+    background-position: -190px 0px;
+}
+
+#logopond::before {
+    background-position: -228px 0px;
+}
+
+/* Activar hover con fade */
+.social-links a:hover::before {
+    opacity: 1;
+}
+
+/* Description */
+.description {
+    flex: 0 0 auto;
+    padding-left: 40px;
+    border-left: 1px solid #c3c3c3;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description p {
+    color: #7d7d7d;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Responsive media controls */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .description {
+        border-left: none;
+        border-top: 1px solid #c3c3c3;
+        padding-left: 0;
+        padding-top: 20px;
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .main-info {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .profile-photo {
+        max-width: 280px;
+    }
+
+    .main-info {
+        min-width: 240px;
+    }
+
+    .social-links {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        gap: 20px;
+    }
+}

@@ -1,2 +1,2 @@
-# amarques.github.io
-Anderson Marques personal web page
+# personal-web
+My minimalist personal website
