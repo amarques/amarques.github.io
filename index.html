@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html role="main" lang="es">
-  <head role="pagedefinition">
+<!doctype html>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The personal website of Anderson Marques">
@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" as="style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
 
     <link rel="shortcut icon" href="statics/img/favicon.ico">
@@ -28,12 +29,13 @@
 
   <body>
     <main class="container">
-      
-      <!-- Imagen LCP real en vez de un div -->
+
       <img
         src="statics/img/profile_photo_A.png"
         alt="Foto de Anderson Marques"
         class="profile-photo"
+        width="404"
+        height="388"
         fetchpriority="high"
       >
 
@@ -41,7 +43,7 @@
         <div class="main-info">
           <h1>Anderson Marques</h1>
 
-          <ul class="social-links" role="navigation">
+          <ul class="social-links" role="menu">
             <li><a id="youtube" href="https://www.youtube.com/@AndersonMaya" target="_blank" aria-label="YouTube">YouTube</a></li>
             <li><a id="twitter" href="https://x.com/andersonmarques" target="_blank" aria-label="Twitter">Twitter</a></li>
             <li><a id="facebook" href="https://www.facebook.com/andy7marques" target="_blank" aria-label="Facebook">Facebook</a></li>
