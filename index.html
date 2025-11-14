@@ -8,18 +8,18 @@
 
     <title>Anderson Marques</title>
 
+    <!-- Precargar imágenes LCP y hover -->
+    <link rel="preload" href="statics/img/profile_photo_A.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="statics/img/profile_photo_B.webp" as="image">
+
+    <!-- CSS -->
     <link rel="preload" href="statics/css/style.css" as="style">
     <link rel="stylesheet" href="statics/css/style.css">
 
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" as="style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
-
-    <!-- Precargar imágenes críticas -->
-    <link rel="preload" href="statics/img/profile_photo_A_241x231.webp" as="image" media="(max-width: 480px)">
-    <link rel="preload" href="statics/img/profile_photo_A.webp" as="image" media="(min-width: 481px)">
 
     <link rel="shortcut icon" href="statics/img/favicon.ico">
 
@@ -33,26 +33,29 @@
 
   <body>
     <main class="container">
-
-      <picture>
-        <source 
-          srcset="statics/img/profile_photo_A_241x231.webp"
-          media="(max-width: 480px)"
-          width="241"
-          height="231"
-          fetchpriority="high"
-        >
+      <!-- Contenedor para la imagen con hover -->
+      <div class="profile-photo-container">
         <img
           src="statics/img/profile_photo_A.webp"
-          srcset="statics/img/profile_photo_A.webp 1x, statics/img/profile_photo_A_241x231.webp 2x"
+          srcset="statics/img/profile_photo_A.webp 404w, statics/img/profile_photo_A_241x231.webp 241w"
+          sizes="(max-width: 480px) 241px, 404px"
           alt="Foto de Anderson Marques"
-          class="profile-photo"
+          class="profile-photo profile-photo-a"
           width="404"
           height="388"
           fetchpriority="high"
           loading="eager"
         >
-      </picture>
+        <img
+          src="statics/img/profile_photo_B.webp"
+          srcset="statics/img/profile_photo_B.webp 404w, statics/img/profile_photo_B_241x231.webp 241w"
+          sizes="(max-width: 480px) 241px, 404px"
+          alt="Foto de Anderson Marques"
+          class="profile-photo profile-photo-b"
+          width="404"
+          height="388"
+        >
+      </div>
 
       <div class="content">
         <div class="main-info">
