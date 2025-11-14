@@ -1,2 +1,3 @@
-# personal-web
-My minimalist personal website
+# Personal Web Page
+That is my minimalist personal website developed by me :)
+Anderson Marques
