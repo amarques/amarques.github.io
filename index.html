@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <link rel="preload" href="statics/css/style.css" as="style">
-    <link rel="stylesheet" href="statics/css/style.css">
+<html role="main" lang="es">
+  <head role="pagedefinition">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The personal website of Anderson Marques">
     <meta name="keywords" content="amarques, tech leader, architect, adobe, aem, hcl, dx, websphere, portal, ibm, developer, specialist, fiap, tech, leader, java, python">
 
+    <title>Anderson Marques</title>
+
+    <link rel="preload" href="statics/css/style.css" as="style">
+    <link rel="stylesheet" href="statics/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+
+    <link rel="shortcut icon" href="statics/img/favicon.ico">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Anderson Marques">
     <meta property="og:description" content="Anderson Marques's personal homepage. Anderson is a tech lover focused on DXP">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://andersonmarques.com.br/">
-    <meta property="og:image" content="statics/img/profile_photo_A.png">
-
-    <link rel="shortcut icon" href="statics/img/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
-
-    <title>Anderson Marques</title>
+    <meta property="og:url" content="https://amarques.github.io/">
+    <meta property="og:image" content="statics/img/profile_photo_A.webp">
   </head>
+
   <body>
-    <div class="container">
-      <div class="profile-photo" role="img" aria-label="Anderson Marques profile photo"></div>
+    <main class="container">
+      
+      <!-- Imagen LCP real en vez de un div -->
+      <img
+        src="statics/img/profile_photo_A.png"
+        alt="Foto de Anderson Marques"
+        class="profile-photo"
+        fetchpriority="high"
+      >
 
       <div class="content">
         <div class="main-info">
           <h1>Anderson Marques</h1>
-          <ul class="social-links">
-            <li><a id="youtube" href="https://www.youtube.com/@AndersonMaya" title="YouTube" aria-label="YouTube" target="_blank">YouTube</a></li>
-            <li><a id="twitter" href="https://x.com/andersonmarques" title="Twitter" aria-label="Twitter" target="_blank">Twitter</a></li>
-            <li><a id="facebook" href="https://www.facebook.com/andy7marques" title="Facebook" aria-label="Facebook" target="_blank">Facebook</a></li>
-            <li><a id="github" href="https://github.com/amarques" title="GitHub" aria-label="GitHub" target="_blank">GitHub</a></li>
-            <li><a id="linkedin" href="https://www.linkedin.com/in/andersonmarques" title="LinkedIn" aria-label="LinkedIn" target="_blank">LinkedIn</a></li>
-            <li><a id="adobe" href="https://www.credly.com/badges/b7fcaf6f-fa4f-4a52-8656-fa1fae38fad8" title="Adobe Experience Manager Sites Developer" aria-label="Adobe Certified Expert" target="_blank">Adobe</a></li>
-            <li><a id="logopond" href="http://logopond.com/andersonmarques" title="Logopond" aria-label="Logopond" target="_blank">Logopond</a></li>
+
+          <ul class="social-links" role="navigation">
+            <li><a id="youtube" href="https://www.youtube.com/@AndersonMaya" target="_blank" aria-label="YouTube">YouTube</a></li>
+            <li><a id="twitter" href="https://x.com/andersonmarques" target="_blank" aria-label="Twitter">Twitter</a></li>
+            <li><a id="facebook" href="https://www.facebook.com/andy7marques" target="_blank" aria-label="Facebook">Facebook</a></li>
+            <li><a id="github" href="https://github.com/amarques" target="_blank" aria-label="GitHub">GitHub</a></li>
+            <li><a id="linkedin" href="https://www.linkedin.com/in/andersonmarques" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a id="adobe" href="https://www.credly.com/badges/b7fcaf6f-fa4f-4a52-8656-fa1fae38fad8" target="_blank" aria-label="Adobe Certified Expert">Adobe</a></li>
+            <li><a id="logopond" href="http://logopond.com/andersonmarques" target="_blank" aria-label="Logopond">Logopond</a></li>
           </ul>
         </div>
 
@@ -44,6 +56,7 @@
           <p>DXP Tech Lead in Minsait | Indra Group</p>
         </div>
       </div>
-    </div>
+      
+    </main>
   </body>
 </html>

@@ -27,19 +27,13 @@ body {
 
 /* Profile photo */
 .profile-photo {
-    width: 100%;
-    max-width: 402px;
-    aspect-ratio: 1;
-    background: url('../img/profile_photo_A.png') no-repeat center;
-    background-size: contain;
-    cursor: pointer;
-    transition: background-image 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
 
 .profile-photo:hover {
-    background-image: url('../img/profile_photo_B.png');
+  content: url('../img/profile_photo_B.png');
 }
-
 /* Content */
 .content {
     display: flex;
